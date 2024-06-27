@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('ville',70);
             $table->float('price');
             $table->float('caution');
+            $table->string('image',255);
             $table->timestamps();
         });
     }

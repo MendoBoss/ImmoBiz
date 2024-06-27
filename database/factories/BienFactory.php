@@ -26,6 +26,7 @@ class BienFactory extends Factory
             'ville' => fake()->city(),
             'price' => fake()->randomFloat(2,500,1500),
             'caution' => fake()->randomFloat(2,500,800),
+            'image' => fake()->imageUrl(640, 480, 'houses', true),
         ];
     }
 }
