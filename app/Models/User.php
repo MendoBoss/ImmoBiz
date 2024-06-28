@@ -28,9 +28,7 @@ class User extends Authenticatable
     // ];
     protected $guarded = [];
 
-    public function biens(){
-        return $this->hasMany(Bien::class);
-    }
+
 
     /**
      * The attributes that should be hidden for serialization.
