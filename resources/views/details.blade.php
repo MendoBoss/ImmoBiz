@@ -11,10 +11,13 @@
     </div>
     <div class="w-5/6 p-10 ">
         <div class="flex flex-wrap  items-start gap-5">
-            <div>
-                <img src="{{$bien->image}}" alt="">
+            <div class="relative">
+                <img src="{{$bien->image}}" alt="img">
+                <span class="absolute -top-2 -right-2 bg-gray-600 p-2 rounded-2xl text-gray-100 text-xs">{{$bien->category->title}}</span>
             </div>
             <div>
+ 
+                {{-- <h3 class="text-xl"><b>Categorie : </b></h3> --}}
                 <h3 class="text-xl"><b>Bien : </b>{{$bien->title}}</h3>
                 <h3 class="text-xl"><b>Adresse : </b>{{$bien->address}}</h3>
                 <h3 class="text-xl"><b>Description : </b>{{$bien->description}}</h3>
@@ -27,6 +30,7 @@
                 @endif
             </div>
         </div>
+        <h3 class="pt-11">Produits similaires :</h3>
         <div class="flex pt-11 gap-4 overflow-auto ">
             @forelse ($biens as $annonce)
             <a href="{{route('showDetails',$annonce->id)}}" class="">
